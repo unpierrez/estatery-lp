@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --primary: #7065F0;
+    --secondary: #100A55;
+    --white: #FFFFFF;
+    --black: #000929;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-white: var(--white);
+  --color-black: var(--black);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  font-family: var(--font-plus-jakarta);
+  color: var(--black);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Some Psuedo-elements for icons */
+
+.arrow-down::after {
+  content: '';
+  background-image: url('../../public/arrow-down.svg');
+  background-size: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+}
+
+.calendar-icon::after {
+  content: '';
+  background-image: url('../../public/calendar.svg');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+}
+
+.estatery::before {
+  content: '';
+  background-image: url('../../public/favicon.svg');
+  background-size: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  width: 18px;
 }
